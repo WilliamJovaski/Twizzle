@@ -1,0 +1,49 @@
+{
+  "model_name": "x3d",
+  "torch_model": "x3d_s",
+  "class_names": [
+    "Toeloop",
+    "Salchow",
+    "Flip",
+    "Loop",
+    "Lutz",
+    "Axel",
+    "CamelSpin",
+    "SitSpin",
+    "UprightSpin",
+    "NoBasic",
+    "Sequence"
+  ],
+  "num_frames": 16,
+  "img_size": 160,
+  "mean": [
+    0.45,
+    0.45,
+    0.45
+  ],
+  "std": [
+    0.225,
+    0.225,
+    0.225
+  ],
+  "input_layout": "BCTHW",
+  "model_file": "model.onnx",
+  "temperature": 0.6634931564331055,
+  "ambiguity_margin": 0.4,
+  "val_macro_f1": 0.8857286969799373,
+  "val_jump_macro_f1": 0.8316881419438055,
+  "cpu_ms_median": 144.73164081573486,
+  "cpu_ms_p90": 146.36616706848145,
+  "threads": 2,
+  "onnx_path": "/mnt/c/Users/Kenzie/Downloads/Deep Learning/export/x3d/model.onnx",
+  "onnx_mb": 12.0,
+  "opset": 17,
+  "export_strategy": "classic exporter, dynamic batch",
+  "dynamic_batch": true,
+  "swish_replaced": 26,
+  "max_abs_diff_vs_pytorch": 5.617737770080566e-06,
+  "parity_ok": true,
+  "params_total": 2997213,
+  "train_seconds": 1778.7114181518555,
+  "dev_mode": false
+}

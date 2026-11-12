@@ -1,0 +1,49 @@
+{
+  "model_name": "r2plus1d",
+  "torch_model": "r2plus1d_18",
+  "class_names": [
+    "Toeloop",
+    "Salchow",
+    "Flip",
+    "Loop",
+    "Lutz",
+    "Axel",
+    "CamelSpin",
+    "SitSpin",
+    "UprightSpin",
+    "NoBasic",
+    "Sequence"
+  ],
+  "num_frames": 16,
+  "img_size": 160,
+  "mean": [
+    0.43216,
+    0.394666,
+    0.37645
+  ],
+  "std": [
+    0.22803,
+    0.22145,
+    0.216989
+  ],
+  "input_layout": "BCTHW",
+  "model_file": "model.onnx",
+  "temperature": 0.685685932636261,
+  "ambiguity_margin": 0.15,
+  "val_macro_f1": 0.9076860964122598,
+  "val_jump_macro_f1": 0.8605676777755228,
+  "cpu_ms_median": 1386.9707584381104,
+  "cpu_ms_p90": 1432.9019784927368,
+  "threads": 2,
+  "onnx_path": "/mnt/c/Users/Kenzie/Downloads/Deep Learning/export/r2plus1d/model.onnx",
+  "onnx_mb": 125.2,
+  "opset": 17,
+  "export_strategy": "classic exporter, dynamic batch",
+  "dynamic_batch": true,
+  "swish_replaced": 0,
+  "max_abs_diff_vs_pytorch": 2.980232238769531e-07,
+  "parity_ok": true,
+  "params_total": 31305768,
+  "train_seconds": 11010.95581150055,
+  "dev_mode": false
+}

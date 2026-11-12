@@ -1,0 +1,27 @@
+# Dataset and cached tensors
+dataset/
+
+# Training runs and development exports
+runs/
+notebook/runs/
+export_dev/
+predictions_dev/
+
+# Keep ONNX deployment models, exclude duplicate PyTorch weights
+export/*/weights.pt
+
+# Python and notebook cache
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Environment and temporary files
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
