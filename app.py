@@ -15,6 +15,14 @@ from fastapi.concurrency import run_in_threadpool
 import pipeline
 import preprocess
 
+if os.environ.get("SPACE_ID"):
+    import spaces            # di Space: harus berhasil, kalau gagal error-nya tampil di Logs
+    gpu = spaces.GPU
+    print("spaces berhasil di-import, ZeroGPU aktif")
+else:
+    def gpu(fn):             # di laptop: tidak pakai ZeroGPU
+        return fn
+
 MAX_SECONDS = 5.5   # batas 5 detik + toleransi kecil
 MAX_UPLOAD_MB = 50
 BASE_DIR = Path(__file__).resolve().parent
@@ -31,6 +39,7 @@ MODE_MAP = {
 }
 DEFAULT_MODE = "Fast (X3D, cepat)"
 
+@gpu
 def classify(video_path, mode_label):
     if video_path is None:
         raise gr.Error("Upload video dulu.")
