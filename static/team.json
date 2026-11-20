@@ -1,0 +1,29 @@
+[
+  {
+    "id": "anabelle-gabriella-imandjaja",
+    "name": "Anabelle Gabriella Imandjaja",
+    "initials": "AG",
+    "role": "Data & Preprocessing Lead",
+    "campus": "Binus University — Computer Science (Data Science)",
+    "linkedin": "https://www.linkedin.com/in/anabelle-gabriella-imandjaja/",
+    "photo": "/static/teams/anabelle.jpeg"
+  },
+  {
+    "id": "kenzie-bellinda",
+    "name": "Kenzie Bellinda",
+    "initials": "KB",
+    "role": "Deep Learning & Model Engineer",
+    "campus": "Binus University — Computer Science (Data Science)",
+    "linkedin": "https://www.linkedin.com/in/kenzie-bellinda/",
+    "photo": "/static/teams/kenzie.jpeg"
+  },
+  {
+    "id": "william-jovaski-trikesumah",
+    "name": "William Jovaski Trikesumah",
+    "initials": "WJ",
+    "role": "ONNX Inference & Frontend Engineer",
+    "campus": "Binus University — Computer Science (Data Science)",
+    "linkedin": "https://www.linkedin.com/in/william-jovaski/",
+    "photo": "/static/teams/william.jpeg"
+  }
+]

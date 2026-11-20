@@ -1,0 +1,535 @@
+[
+  {
+    "id": "alexandra-trusova",
+    "name": "Alexandra Trusova",
+    "country": "AIN",
+    "countryCode": "AIN",
+    "discipline": "Women",
+    "photo": "/static/skaters/alexandra-trusova.jpg",
+    "nickname": "Russian Rocket",
+    "nicknameReason": "Earned for her explosive skating speed, high-flying jump power, and pioneering quadruple jump layouts in women's singles.",
+    "bio": "Single skater who introduced multiple quadruple jump types into international women's competition, becoming the first woman to land the quad Lutz, quad Flip, and quad Toe Loop in ISU events. At the 2022 Beijing Winter Olympics, she executed five quadruple jumps in her free skate to win the silver medal.",
+    "achievements": [
+      "2022 Olympic Winter Games (Beijing) — Silver Medalist, Women's Singles",
+      "2021 ISU World Championships (Stockholm) — Bronze Medalist",
+      "2022 ISU European Championships — Silver Medalist (2020 Bronze)",
+      "2018 & 2019 ISU World Junior Championships — Two-time Gold Medalist",
+      "First woman to land five quadruple jumps in an Olympic free skate (2022)"
+    ],
+    "highlights": [
+      {
+        "youtubeId": "WCOHnZoEuFw",
+        "title": "Quad Lutz + Triple Toeloop — ISU World Championships 2021 (#Shorts, Skating ISU)"
+      }
+    ],
+    "sources": [
+      "https://www.isuresults.com/bios/isufs00102760.htm",
+      "https://olympics.com/en/athletes/alexandra-trusova",
+      "https://en.wikipedia.org/wiki/Alexandra_Trusova"
+    ]
+  },
+  {
+    "id": "alysa-liu",
+    "name": "Alysa Liu",
+    "country": "United States",
+    "countryCode": "USA",
+    "discipline": "Women",
+    "photo": "/static/skaters/alysa-liu.jpg",
+    "nickname": "",
+    "nicknameReason": "",
+    "bio": "American single skater who became the youngest U.S. women's national champion at age 13 in 2019 and the first U.S. woman to land a quadruple jump in international competition. After returning from a brief retirement in 2024, she won the 2025 World Championship and 2026 Olympic women's singles title.",
+    "achievements": [
+      "2026 Olympic Winter Games (Milano Cortina) — Gold Medalist, Women's Singles & Team Event",
+      "2025 ISU World Championships (Boston) — Gold Medalist (2022 Bronze)",
+      "2025–26 ISU Grand Prix Final — Gold Medalist",
+      "2019 & 2020 U.S. National Championships — Two-time Gold Medalist"
+    ],
+    "highlights": [
+      {
+        "youtubeId": "1fXYukxXLCk",
+        "title": "Comeback at U.S. Championships (#Shorts, U.S. Figure Skating)"
+      },
+      {
+        "youtubeId": "FawziuMKZo0",
+        "title": "Milano Cortina 2026 Gala Show Intro (#Shorts, Olympic Games)"
+      }
+    ],
+    "sources": [
+      "https://olympics.com/en/athletes/alysa-liu",
+      "https://en.wikipedia.org/wiki/Alysa_Liu"
+    ]
+  },
+  {
+    "id": "ilia-malinin",
+    "name": "Ilia Malinin",
+    "country": "United States",
+    "countryCode": "USA",
+    "discipline": "Men",
+    "photo": "/static/skaters/ilia-malinin.jpg",
+    "nickname": "Quad God",
+    "nicknameReason": "Adopted as his signature moniker after becoming the first skater to land a ratified quadruple Axel in competition and executing seven-quad programs.",
+    "bio": "American men's single skater who made figure skating history in September 2022 by landing the first ratified quadruple Axel in international competition. He has won three consecutive ISU World Championships (2024–2026) and multiple Grand Prix Final titles.",
+    "achievements": [
+      "2026 Olympic Winter Games (Milano Cortina) — Gold Medalist, Team Event",
+      "2024, 2025 & 2026 ISU World Championships — Three-time Gold Medalist",
+      "2023, 2024 & 2025 ISU Grand Prix Final — Three-time Gold Medalist",
+      "2023–2026 U.S. National Championships — Four-time Gold Medalist",
+      "First skater to land a ratified Quadruple Axel (4A) in ISU competition (2022)"
+    ],
+    "highlights": [
+      {
+        "youtubeId": "4Qn6-8orU1o",
+        "title": "Quadruple Axel (4A) at Skate America 2022 (#Shorts, Skating ISU)"
+      },
+      {
+        "youtubeId": "nWYOQZIDmxQ",
+        "title": "Quad God at Milano Cortina 2026 (#Shorts, Olympic Games)"
+      }
+    ],
+    "sources": [
+      "https://olympics.com/en/athletes/ilia-malinin",
+      "https://en.wikipedia.org/wiki/Ilia_Malinin"
+    ]
+  },
+  {
+    "id": "kaori-sakamoto",
+    "name": "Kaori Sakamoto",
+    "country": "Japan",
+    "countryCode": "JPN",
+    "discipline": "Women",
+    "photo": "/static/skaters/kaori-sakamoto.jpg",
+    "nickname": "Superfly",
+    "nicknameReason": "Given by skating media early in her senior career for her explosive speed and high-trajectory jumps.",
+    "bio": "Japanese single skater noted for high ice coverage, deep running edges, and sustained competitive consistency across three Olympic cycles. She became the first woman since Peggy Fleming to win three consecutive ISU World titles (2022–2024) and added a fourth World title in 2026.",
+    "achievements": [
+      "2026 Olympic Winter Games (Milano Cortina) — Silver Medalist, Women's Singles & Team Event",
+      "2022 Olympic Winter Games (Beijing) — Bronze Medalist (Singles) & Silver Medalist (Team)",
+      "2022, 2023, 2024 & 2026 ISU World Championships — Four-time Gold Medalist (2025 Silver)",
+      "2023–24 ISU Grand Prix Final — Gold Medalist",
+      "2018 ISU Four Continents Championships — Gold Medalist"
+    ],
+    "highlights": [
+      {
+        "youtubeId": "KorX16NAQwc",
+        "title": "World Champion Kaori Sakamoto — Skate Canada Title (#Shorts, Skating ISU)"
+      },
+      {
+        "youtubeId": "EH4QLG8p1qU",
+        "title": "ISU World Championships Emotion (#Shorts, Olympic Games)"
+      }
+    ],
+    "sources": [
+      "https://www.isuresults.com/bios/isufs00014521.htm",
+      "https://olympics.com/en/athletes/kaori-sakamoto",
+      "https://en.wikipedia.org/wiki/Kaori_Sakamoto"
+    ]
+  },
+  {
+    "id": "yuzuru-hanyu",
+    "name": "Yuzuru Hanyu",
+    "country": "Japan",
+    "countryCode": "JPN",
+    "discipline": "Men",
+    "photo": "/static/skaters/yuzuru-hanyu.jpg",
+    "nickname": "Ice Prince",
+    "nicknameReason": "Frequently used by media and commentators in reference to his classical posture, musicality, and presentation on the ice.",
+    "bio": "Japanese men's single skater who won back-to-back Olympic gold medals in 2014 and 2018, becoming the first man in 66 years to defend an Olympic figure skating title. In 2020, he became the first male single skater to complete the career Super Slam across all major ISU junior and senior championships.",
+    "achievements": [
+      "2014 Sochi & 2018 PyeongChang Olympic Winter Games — Two-time Gold Medalist",
+      "2014 & 2017 ISU World Championships — Two-time Gold Medalist (7 total World medals)",
+      "2013–2016 ISU Grand Prix Final — Four-time consecutive Gold Medalist",
+      "2020 ISU Four Continents Championships — Gold Medalist (Career Super Slam)",
+      "First skater to land a quadruple Loop (4Lo) in international competition (2016)"
+    ],
+    "highlights": [
+      {
+        "youtubeId": "TQd7rv_wSZM",
+        "title": "Olympic Gold Free Skate Recovery (#Shorts, Olympic Games)"
+      },
+      {
+        "youtubeId": "iPlpXYrtzBo",
+        "title": "Olympic Gold Medalist Highlight (#Shorts, Olympic Games)"
+      }
+    ],
+    "sources": [
+      "https://olympics.com/en/athletes/yuzuru-hanyu",
+      "https://en.wikipedia.org/wiki/Yuzuru_Hanyu"
+    ]
+  },
+  {
+    "id": "shoma-uno",
+    "name": "Shoma Uno",
+    "country": "Japan",
+    "countryCode": "JPN",
+    "discipline": "Men",
+    "photo": "/static/skaters/shoma-uno.jpg",
+    "nickname": "",
+    "nicknameReason": "",
+    "bio": "Japanese men's single skater who became the first athlete to land a quadruple Flip in international competition in 2016. A three-time Olympic medalist and six-time Japanese national champion, he also became the first Japanese man to win consecutive ISU World titles in 2022 and 2023.",
+    "achievements": [
+      "2018 Olympic Winter Games (PyeongChang) — Silver Medalist, Men's Singles",
+      "2022 Olympic Winter Games (Beijing) — Bronze Medalist (Singles) & Silver Medalist (Team)",
+      "2022 & 2023 ISU World Championships — Two-time Gold Medalist (2017, 2018 Silver)",
+      "2022–23 ISU Grand Prix Final — Gold Medalist",
+      "2019 ISU Four Continents Championships — Gold Medalist"
+    ],
+    "highlights": [
+      {
+        "youtubeId": "i543gnZEEl4",
+        "title": "Men Short Program — ISU World Championships 2022 Gold (#Shorts, Skating ISU)"
+      },
+      {
+        "youtubeId": "U8C54nxBKk8",
+        "title": "World Champion Shoma Uno at NHK Trophy (#Shorts, Skating ISU)"
+      }
+    ],
+    "sources": [
+      "https://olympics.com/en/athletes/shoma-uno",
+      "https://en.wikipedia.org/wiki/Shoma_Uno"
+    ]
+  },
+  {
+    "id": "yuma-kagiyama",
+    "name": "Yuma Kagiyama",
+    "country": "Japan",
+    "countryCode": "JPN",
+    "discipline": "Men",
+    "photo": "/static/skaters/yuma-kagiyama.jpg",
+    "nickname": "",
+    "nicknameReason": "",
+    "bio": "Japanese men's single skater recognized for fluid edge quality, speed across the ice, and consistent podium finishes at major championships. He earned individual and team silver medals at both the 2022 Beijing and 2026 Milano Cortina Winter Olympics.",
+    "achievements": [
+      "2022 & 2026 Olympic Winter Games — Four-time Silver Medalist (2 Individual, 2 Team)",
+      "2021, 2022, 2024 & 2026 ISU World Championships — Four-time Silver Medalist",
+      "2024 ISU Four Continents Championships — Gold Medalist (2020 Bronze)",
+      "2020 Winter Youth Olympic Games — Gold Medalist"
+    ],
+    "highlights": [
+      {
+        "youtubeId": "iGkVy1rXorQ",
+        "title": "Yuma Kagiyama Leaping for Gold at NHK Trophy 2023 (#Shorts, Skating ISU)"
+      },
+      {
+        "youtubeId": "mkZ61mwD7Hs",
+        "title": "Olympic Podium Highlight (#Shorts, Olympic Games)"
+      }
+    ],
+    "sources": [
+      "https://olympics.com/en/athletes/yuma-kagiyama",
+      "https://en.wikipedia.org/wiki/Yuma_Kagiyama"
+    ]
+  },
+  {
+    "id": "amber-glenn",
+    "name": "Amber Glenn",
+    "country": "United States",
+    "countryCode": "USA",
+    "discipline": "Women",
+    "photo": "/static/skaters/amber-glenn.jpg",
+    "nickname": "",
+    "nicknameReason": "",
+    "bio": "American single skater known for landing the triple Axel in international competition and winning three consecutive U.S. national titles from 2024 to 2026. She captured the 2024–25 ISU Grand Prix Final title and earned an Olympic team gold medal at Milano Cortina 2026.",
+    "achievements": [
+      "2026 Olympic Winter Games (Milano Cortina) — Gold Medalist, Team Event",
+      "2024–25 ISU Grand Prix Final — Gold Medalist",
+      "2024, 2025 & 2026 U.S. National Championships — Three-time consecutive Gold Medalist",
+      "2023 & 2025 ISU World Team Trophy — Team Gold Medalist"
+    ],
+    "highlights": [
+      {
+        "youtubeId": "SRlX6jlXmG8",
+        "title": "Triple Axel to the Top of the Podium (#Shorts, Skating ISU)"
+      },
+      {
+        "youtubeId": "nhhTV2cTvRU",
+        "title": "U.S. National Champion Moment (#Shorts, U.S. Figure Skating)"
+      }
+    ],
+    "sources": [
+      "https://olympics.com/en/athletes/amber-glenn",
+      "https://en.wikipedia.org/wiki/Amber_Glenn"
+    ]
+  },
+  {
+    "id": "chaeyeon-kim",
+    "name": "Chaeyeon Kim",
+    "country": "Republic of Korea",
+    "countryCode": "KOR",
+    "discipline": "Women",
+    "photo": "/static/skaters/chaeyeon-kim.jpg",
+    "nickname": "",
+    "nicknameReason": "",
+    "bio": "South Korean single skater who rose rapidly from starting serious training in 2017 to reaching the senior World Championship podium in 2024. She won both the 2025 ISU Four Continents Championships in Seoul and the 2025 Asian Winter Games in Harbin.",
+    "achievements": [
+      "2024 ISU World Championships (Montreal) — Bronze Medalist",
+      "2025 ISU Four Continents Championships (Seoul) — Gold Medalist (2024 Silver)",
+      "2025 Asian Winter Games (Harbin) — Gold Medalist",
+      "2022–23 ISU Junior Grand Prix Final — Bronze Medalist",
+      "2025 South Korean Championships — Gold Medalist"
+    ],
+    "highlights": [
+      {
+        "youtubeId": "Az2ZLzawL0U",
+        "title": "Women Free Skating — Four Continents Seoul 2025 Gold (Skating ISU)"
+      }
+    ],
+    "sources": [
+      "https://en.wikipedia.org/wiki/Kim_Chae-yeon_(figure_skater)"
+    ]
+  },
+  {
+    "id": "junhwan-cha",
+    "name": "Junhwan Cha",
+    "country": "Republic of Korea",
+    "countryCode": "KOR",
+    "discipline": "Men",
+    "photo": "/static/skaters/junhwan-cha.jpg",
+    "nickname": "Figure Prince",
+    "nicknameReason": "Used by South Korean media for his graceful skating style and background as a former child actor before focusing on figure skating.",
+    "bio": "South Korean men's single skater who became the first male skater from South Korea to win an ISU Championship title at the 2022 Four Continents and a World Championship medal in 2023. Across three Winter Olympic appearances, he placed 15th in 2018, 5th in 2022, and 4th in 2026.",
+    "achievements": [
+      "2023 ISU World Championships (Saitama) — Silver Medalist",
+      "2022 ISU Four Continents Championships — Gold Medalist (2025 Silver)",
+      "2025 Asian Winter Games (Harbin) — Gold Medalist",
+      "2018–19 ISU Grand Prix Final — Bronze Medalist",
+      "Ten-time consecutive South Korean National Champion (2017–2026)"
+    ],
+    "highlights": [
+      {
+        "youtubeId": "6aI3ATRCsOw",
+        "title": "Men Short Program — Four Continents 2022 Gold (#Shorts, Skating ISU)"
+      },
+      {
+        "youtubeId": "QCIzT2ZuWZc",
+        "title": "Men Free Skating — Four Continents 2022 Gold (#Shorts, Skating ISU)"
+      }
+    ],
+    "sources": [
+      "https://www.isuresults.com/bios/isufs00034708.htm",
+      "https://olympics.com/en/athletes/junhwan-cha",
+      "https://en.wikipedia.org/wiki/Cha_Jun-hwan"
+    ]
+  },
+  {
+    "id": "evgeni-plushenko",
+    "name": "Evgeni Plushenko",
+    "country": "Russia",
+    "countryCode": "RUS",
+    "discipline": "Men",
+    "photo": "/static/skaters/evgeni-plushenko.jpg",
+    "nickname": "The Snow King / Plushy",
+    "nicknameReason": "Called The Snow King for his dominant championship reign and regal programs, while Plushy is an affectionate shortening of his surname.",
+    "bio": "Russian men's single skater who competed across four Winter Olympic Games from 2002 to 2014, winning four Olympic medals to tie Gillis Grafström's all-time figure skating record. He also captured three ISU World Championship titles, seven European titles, and four Grand Prix Finals.",
+    "achievements": [
+      "2006 Olympic Winter Games (Torino) — Gold Medalist, Men's Singles",
+      "2014 Olympic Winter Games (Sochi) — Gold Medalist, Team Event",
+      "2002 & 2010 Olympic Winter Games — Silver Medalist, Men's Singles",
+      "2001, 2003 & 2004 ISU World Championships — Three-time Gold Medalist",
+      "2000–2012 ISU European Championships — Seven-time Gold Medalist"
+    ],
+    "highlights": [
+      {
+        "youtubeId": "7iY1G2GHtnM",
+        "title": "Men's Singles Gold Routine — Torino 2006 (Olympics Figure Skating)"
+      },
+      {
+        "youtubeId": "BeMoig-AJzk",
+        "title": "Team Event Performance — Sochi 2014 (Olympic Games)"
+      }
+    ],
+    "sources": [
+      "https://olympics.com/en/athletes/evgeni-plushenko",
+      "https://en.wikipedia.org/wiki/Evgeni_Plushenko"
+    ]
+  },
+  {
+    "id": "alexei-yagudin",
+    "name": "Alexei Yagudin",
+    "country": "Russia",
+    "countryCode": "RUS",
+    "discipline": "Men",
+    "photo": "/static/skaters/alexei-yagudin.jpg",
+    "nickname": "",
+    "nicknameReason": "",
+    "bio": "Russian men's single skater who won the 2002 Salt Lake City Olympic gold medal with his iconic free skate to The Man in the Iron Mask. During the 2001–02 season, he became the first skater to sweep the Grand Prix Final, European Championships, World Championships, and Olympic Games in a single season.",
+    "achievements": [
+      "2002 Olympic Winter Games (Salt Lake City) — Gold Medalist, Men's Singles",
+      "1998, 1999, 2000 & 2002 ISU World Championships — Four-time Gold Medalist",
+      "1998, 1999 & 2002 ISU European Championships — Three-time Gold Medalist",
+      "1998–99 & 2001–02 ISU Grand Prix Final — Two-time Gold Medalist",
+      "2001–02 Single-Season Golden Slam (GPF, Europeans, Worlds, Olympics)"
+    ],
+    "highlights": [
+      {
+        "youtubeId": "CdILfYMfCNA",
+        "title": "Short Program — Salt Lake City 2002 (Olympics Figure Skating)"
+      },
+      {
+        "youtubeId": "lt8OXGBB8Xg",
+        "title": "Salt Lake City 2002 Gold Medal Rewind (Olympic Games)"
+      }
+    ],
+    "sources": [
+      "https://olympics.com/en/athletes/alexei-yagudin",
+      "https://en.wikipedia.org/wiki/Alexei_Yagudin"
+    ]
+  },
+  {
+    "id": "nathan-chen",
+    "name": "Nathan Chen",
+    "country": "United States",
+    "countryCode": "USA",
+    "discipline": "Men",
+    "photo": "/static/skaters/nathan-chen.jpg",
+    "nickname": "Quad King",
+    "nicknameReason": "Earned the moniker for his consistency and mastery of quadruple jumps, becoming the first skater to land five quads in one program and six across an Olympic free skate.",
+    "bio": "American men's single skater who won the 2022 Beijing Olympic gold medal and three consecutive ISU World Championships from 2018 to 2021. He also won six straight U.S. national titles (2017–2022) and three consecutive Grand Prix Final crowns.",
+    "achievements": [
+      "2022 Olympic Winter Games (Beijing) — Gold Medalist (Singles) & Silver Medalist (Team)",
+      "2018 Olympic Winter Games (PyeongChang) — Bronze Medalist, Team Event",
+      "2018, 2019 & 2021 ISU World Championships — Three-time Gold Medalist",
+      "2017–2019 ISU Grand Prix Final — Three-time consecutive Gold Medalist",
+      "2017–2022 U.S. National Championships — Six-time consecutive Gold Medalist"
+    ],
+    "highlights": [
+      {
+        "youtubeId": "qU81Br10d3o",
+        "title": "Quad Lutz — ISU World Championships (#Shorts, Skating ISU)"
+      },
+      {
+        "youtubeId": "fIcWO9VJV9o",
+        "title": "Rocket Man Olympic Champion (#Shorts, Olympics Figure Skating)"
+      }
+    ],
+    "sources": [
+      "https://olympics.com/en/athletes/nathan-chen",
+      "https://en.wikipedia.org/wiki/Nathan_Chen"
+    ]
+  },
+  {
+    "id": "alina-zagitova",
+    "name": "Alina Zagitova",
+    "country": "Russia",
+    "countryCode": "RUS",
+    "discipline": "Women",
+    "photo": "/static/skaters/alina-zagitova.jpg",
+    "nickname": "The Red Ballerina",
+    "nicknameReason": "Popularized by her 2017–18 Olympic gold medal free skate to Don Quixote, which she performed in a signature red ballet tutu.",
+    "bio": "Russian single skater who won women's singles gold at the 2018 PyeongChang Winter Olympics and completed the career Super Slam with her 2019 World Championship victory. Her back-loaded 2018 Olympic jump layout prompted the ISU to revise its second-half bonus rules.",
+    "achievements": [
+      "2018 Olympic Winter Games (PyeongChang) — Gold Medalist (Singles) & Silver Medalist (Team)",
+      "2019 ISU World Championships (Saitama) — Gold Medalist",
+      "2018 ISU European Championships (Moscow) — Gold Medalist (2019 Silver)",
+      "2017–18 ISU Grand Prix Final — Gold Medalist",
+      "Completed the career Super Slam across all major junior and senior ISU titles"
+    ],
+    "highlights": [
+      {
+        "youtubeId": "All1wvmDiiI",
+        "title": "Olympic Gold Winning Moments (#Shorts, Olympic Icons)"
+      },
+      {
+        "youtubeId": "TlXCk1LDlC0",
+        "title": "Gold Medal Free Skating — PyeongChang 2018 (Olympic Games)"
+      }
+    ],
+    "sources": [
+      "https://olympics.com/en/athletes/alina-zagitova",
+      "https://en.wikipedia.org/wiki/Alina_Zagitova"
+    ]
+  },
+  {
+    "id": "alena-kostornaia",
+    "name": "Alena Kostornaia",
+    "country": "Russia",
+    "countryCode": "RUS",
+    "discipline": "Women",
+    "photo": "/static/skaters/alena-kostornaia.jpg",
+    "nickname": "",
+    "nicknameReason": "",
+    "bio": "Russian figure skater known for her edge quality, triple Axel, and undefeated 2019–20 senior Grand Prix and European Championship campaign. During the 2019–20 Grand Prix Final, she set a then-world-record short program score of 85.45 points before later transitioning to pair skating in 2023.",
+    "achievements": [
+      "2020 ISU European Championships (Graz) — Gold Medalist",
+      "2019–20 ISU Grand Prix Final (Torino) — Gold Medalist",
+      "2019 Internationaux de France & 2019 NHK Trophy — Grand Prix Gold Medalist",
+      "2018–19 ISU Junior Grand Prix Final — Gold Medalist",
+      "2020 ISU Skating Awards — Best Newcomer"
+    ],
+    "highlights": [
+      {
+        "youtubeId": "lm_ELKKSgLI",
+        "title": "Women's Free Skating — Internationaux de France 2019 Gold (Skating ISU)"
+      },
+      {
+        "youtubeId": "Y1cFnu15DsM",
+        "title": "Women's Short Program — Internationaux de France 2019 (Skating ISU)"
+      }
+    ],
+    "sources": [
+      "https://en.wikipedia.org/wiki/Alena_Kostornaia"
+    ]
+  },
+  {
+    "id": "anna-shcherbakova",
+    "name": "Anna Shcherbakova",
+    "country": "Russia",
+    "countryCode": "RUS",
+    "discipline": "Women",
+    "photo": "/static/skaters/anna-shcherbakova.jpg",
+    "nickname": "Iron Fairy",
+    "nicknameReason": "Given for the contrast between her delicate, ethereal skating style and her mental toughness and resilience while landing quadruple jumps under pressure.",
+    "bio": "Russian single skater who won gold at the 2022 Beijing Winter Olympics and the 2021 ISU World Championships, alongside three consecutive Russian national titles (2019–2021). She also became the first female skater to land a quadruple Lutz in senior competition and two quad Flips in a single program.",
+    "achievements": [
+      "2022 Olympic Winter Games (Beijing) — Gold Medalist, Women's Singles",
+      "2021 ISU World Championships (Stockholm) — Gold Medalist",
+      "2022 ISU European Championships (Tallinn) — Gold Medalist (2020 Silver)",
+      "2021 ISU World Team Trophy — Team Gold Medalist & 1st Individual",
+      "2019, 2020 & 2021 Russian National Championships — Three-time Gold Medalist"
+    ],
+    "highlights": [
+      {
+        "youtubeId": "veG3T0EyQJg",
+        "title": "Triple Flip — ISU World Championships 2021 Gold (#Shorts, Skating ISU)"
+      },
+      {
+        "youtubeId": "pcm-0Ywjg8I",
+        "title": "Step Sequence — ISU World Team Trophy 2021 (#Shorts, Skating ISU)"
+      }
+    ],
+    "sources": [
+      "https://olympics.com/en/athletes/anna-shcherbakova",
+      "https://en.wikipedia.org/wiki/Anna_Shcherbakova"
+    ]
+  },
+  {
+    "id": "kamila-valieva",
+    "name": "Kamila Valieva",
+    "country": "Russia",
+    "countryCode": "RUS",
+    "discipline": "Women",
+    "photo": "/static/skaters/kamila-valieva.jpg",
+    "nickname": "Miss Perfect",
+    "nicknameReason": "Used by commentators and fans for her posture, flexibility, and technical precision during her junior and early 2021 senior seasons.",
+    "bio": "Russian single skater who won the 2020 World Junior Championship and 2021 Grand Prix titles at Skate Canada and Rostelecom Cup, becoming the first woman to surpass 90 points in a short program. In 2024, CAS issued a four-year ban retroactive to December 25, 2021, disqualifying her subsequent 2022 European and Beijing Olympic results.",
+    "achievements": [
+      "2020 ISU World Junior Championships (Tallinn) — Gold Medalist",
+      "2019–20 ISU Junior Grand Prix Final (Torino) — Gold Medalist",
+      "2021 ISU GP Skate Canada & 2021 Rostelecom Cup — Gold Medalist (prior to Dec 25, 2021)",
+      "First woman to break 90 points in an ISU Short Program (Nov 2021; results from Dec 25, 2021 onward disqualified by CAS)"
+    ],
+    "highlights": [
+      {
+        "youtubeId": "dex_saVJ5kA",
+        "title": "Women's Short Program — Rostelecom Cup 2021 (#Shorts, Skating ISU)"
+      },
+      {
+        "youtubeId": "uLvQQPssWns",
+        "title": "Women's Free Skating — Rostelecom Cup 2021 (#Shorts, Skating ISU)"
+      }
+    ],
+    "sources": [
+      "https://olympics.com/en/athletes/kamila-valieva",
+      "https://en.wikipedia.org/wiki/Kamila_Valieva"
+    ]
+  }
+]

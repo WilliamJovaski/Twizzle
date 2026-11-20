@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Twizzle | Deep Learning Figure Skating Element Recognition</title>
+  <link rel="icon" type="image/svg+xml" href="/static/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600&family=Orbitron:wght@700;800;900&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css?v=20261121f" />
+</head>
+<body>
+  <!-- Top Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="brand-logo" aria-label="Twizzle Home">
+        <span class="brand-text">TW<span class="brand-dot">I</span>ZZLE</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary Navigation">
+        <a href="#elements" class="nav-link">Elements</a>
+        <a href="#classifier" class="nav-link">AI Studio</a>
+        <a href="#skaters" class="nav-link">Skaters</a>
+        <a href="#how-it-works" class="nav-link">Pipeline</a>
+        <a href="#tech-stack" class="nav-link">Tech Stack</a>
+        <a href="#team" class="nav-link">Team</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="#classifier" class="btn btn-primary btn-sm">
+          Classify Clip
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION (UNTOUCHED AS REQUESTED) -->
+  <section id="home" class="hero-section">
+    <!-- Top Action Sub-Bar that slides down at Stage 4 -->
+    <div id="heroTopBar" class="hero-top-bar">
+      <h2 class="hero-bar-title">DECODE EVERY TWIZZLE</h2>
+      <div class="hero-bar-buttons">
+        <a href="#classifier" class="btn btn-primary">
+          Launch AI Studio
+        </a>
+        <a href="#elements" class="btn btn-outline">
+          Explore Architecture
+        </a>
+      </div>
+    </div>
+
+    <!-- Main Visual Stage -->
+    <div class="hero-stage">
+      <!-- Layer 1: 5 Horizontal Ice Rink Slices -->
+      <div class="bg-slices-container" id="bgSlices">
+        <div class="bg-slice slice-even" style="--slice-idx: 0; top: 0%; background-position: 0% 0%;"></div>
+        <div class="bg-slice slice-odd"  style="--slice-idx: 1; top: 20%; background-position: 0% 25%;"></div>
+        <div class="bg-slice slice-even" style="--slice-idx: 2; top: 40%; background-position: 0% 50%;"></div>
+        <div class="bg-slice slice-odd"  style="--slice-idx: 3; top: 60%; background-position: 0% 75%;"></div>
+        <div class="bg-slice slice-even" style="--slice-idx: 4; top: 80%; background-position: 0% 100%;"></div>
+      </div>
+
+      <!-- Subtle vignette overlay for depth -->
+      <div class="hero-vignette"></div>
+
+      <!-- Layer 2: Geometric Blue Emblem & Cyan Orb Backdrop -->
+      <img
+        id="heroLogoBackdrop"
+        src="/static/hero_logo.svg"
+        alt="Twizzle Geometric Backdrop"
+        class="hero-logo-img"
+      />
+
+      <!-- Layer 3: Giant Background Typography (slides in behind skater, then fades) -->
+      <div id="heroGiantText" class="hero-giant-text" aria-hidden="true">
+        <h1 class="giant-word word-1">DECODE</h1>
+        <h1 class="giant-word word-2">EVERY</h1>
+        <h1 class="giant-word word-3">TWIZZLE</h1>
+      </div>
+
+      <!-- Layer 4: Twizzle / One-Foot Spin Figure Skater Cutout -->
+      <img
+        id="heroSkater"
+        src="/static/hero_skater.png"
+        alt="Figure Skater Performing Twizzle Spin"
+        class="hero-skater-img"
+      />
+
+      <!-- Layer 5: Telemetry & Biomechanics Callout Overlay -->
+      <img
+        id="heroFigures"
+        src="/static/hero_skater_figures.svg"
+        alt="Twizzle Spin Telemetry Metrics Overlay"
+        class="hero-figures-img"
+      />
+
+      <!-- Floating Bottom Status Pill -->
+      <div id="heroBottomBadge" class="hero-bottom-badge">
+        <span class="live-dot"></span>
+        <span>Twizzle Deep Learning Engine — <strong>11 Set-Level Elements</strong> (X3D + R(2+1)D)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       LIGHT EDITORIAL WORKSPACE (Nexora-Inspired Architecture)
+       ========================================================================= -->
+  <main class="light-surface-root">
+
+    <!-- SECTION 01: ELEMENTS & MOVEMENTS (11 Set-Level Classes) -->
+    <section id="elements" class="editorial-section">
+      <div class="container">
+        <div class="editorial-top-split">
+          <div class="section-header-editorial">
+            <div class="section-eyebrow" data-eyebrow-num="01" data-eyebrow-text="ELEMENTS &amp; MOVEMENTS"></div>
+            <h2 class="editorial-heading">
+              11 Set-level elements,
+              <span class="heading-accent">mapped across time.</span>
+            </h2>
+            <p class="editorial-lead">
+              Select any of the 11 figure skating classes recognized by our model to inspect its takeoff edge, rotational mechanics, and 16-frame spatio-temporal signature. Data is loaded from <code>static/elements.json</code>.
+            </p>
+          </div>
+
+          <!-- Hairline Stat Column (Reference Style) -->
+          <div class="stat-strip" aria-label="Model Dataset Specifications">
+            <div class="stat-item">
+              <span class="stat-value">06</span>
+              <span class="stat-label">Jump classes (T, S, F, Lo, Lz, A)</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">04</span>
+              <span class="stat-label">Spin classes (Camel, Sit, Upright, NoBasic)</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">01</span>
+              <span class="stat-label">Step &amp; choreographic sequence</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hairline-divider"></div>
+
+        <!-- Master-Detail 11 Elements Explorer (Carousel on Mobile, Split on Desktop) -->
+        <div class="elements-explorer">
+          <div
+            id="elementsTabList"
+            class="elements-tablist"
+            role="tablist"
+            aria-label="11 Figure Skating Elements"
+          >
+            <!-- Populated from static/elements.json -->
+          </div>
+
+          <div
+            id="elementPreviewPanel"
+            class="ui-card ui-card-glass element-preview-panel"
+            role="tabpanel"
+            aria-live="polite"
+          >
+            <div class="preview-media-stage">
+              <video
+                id="elementPreviewVideo"
+                class="element-preview-video"
+                muted
+                loop
+                playsinline
+                preload="none"
+                aria-label="Element motion loop preview"
+              ></video>
+              <div id="elementDiagramOverlay" class="element-diagram-overlay" aria-hidden="true"></div>
+              <div class="preview-stage-badges">
+                <span id="elPreviewIndex" class="badge-mono">01 / 11</span>
+                <span id="elPreviewCategory" class="badge-pill">Jump</span>
+              </div>
+            </div>
+
+            <div class="preview-body">
+              <div class="preview-title-row">
+                <div>
+                  <span id="elPreviewCode" class="preview-code">ISU Code: T</span>
+                  <h3 id="elPreviewName" class="preview-title">Toeloop</h3>
+                </div>
+                <div class="difficulty-box">
+                  <span class="difficulty-label">DIFFICULTY / BASE VALUE</span>
+                  <strong id="elPreviewDifficulty" class="difficulty-val">Base 1.30 (2T) – 9.50 (4T)</strong>
+                </div>
+              </div>
+
+              <p id="elPreviewSummary" class="preview-description">
+                Loading element specification...
+              </p>
+
+              <div class="preview-specs-grid">
+                <div class="spec-cell">
+                  <span class="spec-label">ENTRY / TAKEOFF EDGE</span>
+                  <span id="elPreviewTakeoff" class="spec-value">—</span>
+                </div>
+                <div class="spec-cell">
+                  <span class="spec-label">EXIT / LANDING AXIS</span>
+                  <span id="elPreviewLanding" class="spec-value">—</span>
+                </div>
+                <div class="spec-cell spec-cell-wide">
+                  <span class="spec-label">16-FRAME SPATIO-TEMPORAL CUE</span>
+                  <span id="elPreviewCue" class="spec-value">—</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 02: AI VIDEO CLASSIFIER STUDIO -->
+    <section id="classifier" class="editorial-section section-tinted">
+      <div class="container">
+        <div class="editorial-top-split">
+          <div class="section-header-editorial">
+            <div class="section-eyebrow" data-eyebrow-num="02" data-eyebrow-text="INFERENCE STUDIO"></div>
+            <h2 class="editorial-heading">
+              Upload a short skating clip,
+              <span class="heading-accent">inspect class probabilities.</span>
+            </h2>
+            <p class="editorial-lead">
+              Submit an MP4 clip (up to 5 seconds) containing one jump, spin, or sequence. Inference executes on Hugging Face Space (<code>WilliamJovaski/Twizzle</code>) using calibrated X3D and R(2+1)D ONNX models.
+            </p>
+          </div>
+
+          <div class="stat-strip" aria-label="Inference Metrics">
+            <div class="stat-item">
+              <span class="stat-value">16×160²</span>
+              <span class="stat-label">Uniform temporal RGB input</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">95.2%</span>
+              <span class="stat-label">Fused ensemble test accuracy</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">0.26s</span>
+              <span class="stat-label">X3D Fast inference time</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hairline-divider"></div>
+
+        <div class="studio-grid">
+          <!-- Left Column: Video Upload & Controls -->
+          <div class="ui-card upload-card">
+            <div class="card-header-row">
+              <h3>1. Input Video Clip</h3>
+              <button id="loadSampleBtn" type="button" class="btn btn-secondary btn-sm">
+                Load Sample Clip (contoh.mp4)
+              </button>
+            </div>
+
+            <div id="dropZone" class="drop-zone">
+              <input type="file" id="videoInput" accept="video/mp4,video/webm,video/quicktime,video/*" hidden />
+              <div id="dropPrompt" class="drop-prompt" tabindex="0" role="button" aria-label="Upload MP4 video clip">
+                <div class="upload-icon-circle" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                    <polyline points="17 8 12 3 7 8"/>
+                    <line x1="12" y1="3" x2="12" y2="15"/>
+                  </svg>
+                </div>
+                <p class="drop-main-text">Click or drag &amp; drop an MP4 video here</p>
+                <p class="drop-sub-text">Maximum 5 seconds • Single element (Jump, Spin, or Sequence)</p>
+              </div>
+              <div id="videoPreviewWrap" class="video-preview-wrap hidden">
+                <video id="videoPreview" controls playsinline></video>
+                <button id="clearVideoBtn" type="button" class="btn btn-secondary btn-sm btn-clear-pos" title="Change video">Change Video</button>
+              </div>
+            </div>
+
+            <!-- Inference Mode Selection -->
+            <div class="mode-selector">
+              <label class="mode-label">2. Select Inference Mode</label>
+              <div class="mode-options">
+                <label class="mode-option selected" id="modeFastCard">
+                  <input type="radio" name="mode" value="fast" checked />
+                  <div class="mode-content">
+                    <div class="mode-title-row">
+                      <span class="mode-name">Fast (X3D)</span>
+                      <span class="mode-badge fast">0.26s Server</span>
+                    </div>
+                    <p class="mode-desc">Single X3D model (12.0 MB ONNX). Low latency, best for spins and quick checks.</p>
+                  </div>
+                </label>
+
+                <label class="mode-option" id="modeAccurateCard">
+                  <input type="radio" name="mode" value="accurate" />
+                  <div class="mode-content">
+                    <div class="mode-title-row">
+                      <span class="mode-name">Accurate (Fused)</span>
+                      <span class="mode-badge accurate">Recommended for Jumps</span>
+                    </div>
+                    <p class="mode-desc">50:50 calibrated probability average of X3D + R(2+1)D (125.2 MB ONNX).</p>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <button id="classifyBtn" type="button" class="btn btn-primary btn-block">
+              <span id="classifyBtnText">Classify Skating Element</span>
+            </button>
+
+            <div id="errorBox" class="error-box hidden" role="alert"></div>
+          </div>
+
+          <!-- Right Column: Prediction Results -->
+          <div class="ui-card results-card">
+            <div class="card-header-row">
+              <h3>2. Recognition Output</h3>
+              <span id="metaBadge" class="meta-badge">Awaiting video...</span>
+            </div>
+
+            <!-- Empty State -->
+            <div id="emptyState" class="empty-results">
+              <div class="empty-indicator" aria-hidden="true">11</div>
+              <p class="empty-title">No Video Analyzed Yet</p>
+              <p class="empty-desc">
+                Select a clip or click <strong>Load Sample Clip (contoh.mp4)</strong> on the left, then press <strong>Classify Skating Element</strong>.
+              </p>
+            </div>
+
+            <!-- Active Results Container -->
+            <div id="resultsContent" class="results-content hidden">
+              <div class="top-prediction-banner">
+                <div class="pred-label-group">
+                  <span class="pred-eyebrow">TOP-1 PREDICTION</span>
+                  <h4 id="topClassName" class="pred-class-name">—</h4>
+                  <span id="topClassCategory" class="pred-category-tag">Jump Element</span>
+                </div>
+                <div class="pred-Ring">
+                  <span id="topConfidence" class="pred-confidence-val">0%</span>
+                  <span class="pred-confidence-sub">Calibrated Softmax</span>
+                </div>
+              </div>
+
+              <!-- Top 3 Probabilities -->
+              <div class="top3-section">
+                <h5 class="sub-heading">Top 3 Candidates</h5>
+                <div id="top3Bars" class="top3-bars"></div>
+              </div>
+
+              <!-- Accordion for All 11 Classes -->
+              <details class="all-classes-details">
+                <summary>View All 11 Element Classes</summary>
+                <div class="table-scroll">
+                  <table class="prob-table">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Skating Element</th>
+                        <th>Category</th>
+                        <th>Probability</th>
+                      </tr>
+                    </thead>
+                    <tbody id="allClassesBody"></tbody>
+                  </table>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+
+        <!-- 16 Sampled Frames Filmstrip Gallery -->
+        <div id="framesSection" class="ui-card frames-card hidden">
+          <div class="card-header-row">
+            <div>
+              <h3>16 Sampled Model Input Frames</h3>
+              <p class="frames-sub">Uniformly sampled 160×160 RGB frames decoded by <code>preprocess.sample_frames()</code>.</p>
+            </div>
+            <span class="frame-count-pill">16 Frames • 160×160 px</span>
+          </div>
+          <div id="framesGallery" class="frames-grid"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 03: SKATER GALLERY & PROFILE HIGHLIGHTS -->
+    <section id="skaters" class="editorial-section">
+      <div class="container">
+        <div class="editorial-top-split">
+          <div class="section-header-editorial">
+            <div class="section-eyebrow" data-eyebrow-num="03" data-eyebrow-text="SKATER DIRECTORY"></div>
+            <h2 class="editorial-heading">
+              Athlete reference gallery
+              <span class="heading-accent">&amp; program highlights.</span>
+            </h2>
+            <p class="editorial-lead">
+              Filter skaters by discipline or federation country, or search by name. Select any portrait tile in the strip to inspect athlete records and embedded YouTube program highlights below.
+            </p>
+          </div>
+
+          <div class="data-source-note">
+            <span class="note-tag">DATA SOURCE NOTE</span>
+            <p>
+              Profiles are loaded from <code>static/skaters.json</code> with neutral SVG portrait silhouettes. Add your own photo paths, bio text, achievements, and 11-character YouTube video IDs directly in that file.
+            </p>
+          </div>
+        </div>
+
+        <div class="hairline-divider"></div>
+
+        <!-- Filter & Search Controls -->
+        <div class="skater-filters-bar" role="region" aria-label="Skater Directory Filters">
+          <div class="filter-field filter-search">
+            <label for="skaterSearchInput" class="sr-only">Search skater by name</label>
+            <input
+              type="search"
+              id="skaterSearchInput"
+              class="ui-input"
+              placeholder="Search skater name (e.g. Trusova, Alysa Liu)..."
+              autocomplete="off"
+            />
+          </div>
+
+          <div class="filter-field">
+            <label for="disciplineFilter" class="filter-inline-label">Discipline</label>
+            <select id="disciplineFilter" class="ui-select">
+              <option value="ALL">All Disciplines</option>
+              <option value="Women">Women</option>
+              <option value="Men">Men</option>
+              <option value="Pairs">Pairs</option>
+              <option value="Ice Dance">Ice Dance</option>
+            </select>
+          </div>
+
+          <div class="filter-field">
+            <label for="countryFilter" class="filter-inline-label">Country</label>
+            <select id="countryFilter" class="ui-select">
+              <option value="ALL">All Countries</option>
+            </select>
+          </div>
+
+          <button id="resetSkaterFiltersBtn" type="button" class="btn btn-secondary btn-sm">
+            Reset Filters
+          </button>
+        </div>
+
+        <!-- COMPONENT 1: SkaterStrip (Parallelogram Portrait Tile Strip) -->
+        <div id="skaterStripComponent" class="skater-strip-component">
+          <div class="skater-strip-toolbar">
+            <span id="skaterStripCount" class="strip-count-label">12 Skaters</span>
+            <div class="strip-nav-controls">
+              <button
+                id="stripPrevBtn"
+                type="button"
+                class="btn btn-secondary btn-sm strip-arrow-btn"
+                aria-label="Previous skater"
+              >
+                Prev
+              </button>
+              <button
+                id="stripNextBtn"
+                type="button"
+                class="btn btn-secondary btn-sm strip-arrow-btn"
+                aria-label="Next skater"
+              >
+                Next
+              </button>
+            </div>
+          </div>
+
+          <div class="skater-strip-stage">
+            <div
+              id="skaterStripTrack"
+              class="skater-strip-track"
+              role="region"
+              aria-label="Athlete portrait selection strip"
+            >
+              <!-- Populated by SkaterTile component -->
+            </div>
+          </div>
+
+          <div id="skaterStripEmpty" class="ui-card skater-strip-empty hidden" role="status">
+            Tidak ada skater yang cocok
+          </div>
+        </div>
+
+        <!-- COMPONENT 3: SkaterDetail (Inline Detail Panel Below Strip) -->
+        <article
+          id="skaterDetailPanel"
+          class="ui-card skater-detail-panel"
+          aria-live="polite"
+        >
+          <div class="skater-detail-header">
+            <div>
+              <div class="skater-detail-badges">
+                <span id="detailCountryBadge" class="badge-mono">AIN</span>
+                <span id="detailDisciplineBadge" class="badge-pill">Women</span>
+              </div>
+              <h3 id="detailSkaterHeading" class="detail-skater-heading">
+                <span id="detailGivenName" class="detail-name-dark">Alexandra</span>
+                <span id="detailSurname" class="detail-name-blue">Trusova</span>
+              </h3>
+              <div id="detailNicknameWrap" class="detail-nickname-wrap hidden">
+                <span id="detailNicknameBadge" class="detail-nickname-label"></span>
+                <p id="detailNicknameReason" class="detail-nickname-reason hidden"></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="hairline-divider detail-divider"></div>
+
+          <div class="skater-detail-body">
+            <div class="skater-detail-col">
+              <h4 class="modal-section-label">SHORT BIO</h4>
+              <p id="detailBioText" class="detail-bio-text"></p>
+
+              <h4 class="modal-section-label">ACHIEVEMENTS</h4>
+              <ul id="detailAchievementsList" class="modal-achievements-list"></ul>
+
+              <div id="detailSourcesWrap" class="detail-sources-wrap hidden">
+                <h4 class="modal-section-label">SOURCES</h4>
+                <ul id="detailSourcesList" class="detail-sources-list"></ul>
+              </div>
+            </div>
+
+            <div class="skater-detail-col">
+              <div class="detail-highlights-header">
+                <h4 class="modal-section-label">HIGHLIGHTS</h4>
+                <div id="detailVideoTabs" class="detail-video-tabs" role="tablist" aria-label="Select highlight video"></div>
+              </div>
+              <div id="detailHighlightsContainer" class="modal-highlights-container"></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECTION 04: PIPELINE & TECHNICAL SPECIFICATIONS -->
+    <section id="how-it-works" class="editorial-section section-tinted">
+      <div class="container">
+        <div class="section-header-editorial">
+          <div class="section-eyebrow" data-eyebrow-num="04" data-eyebrow-text="SYSTEM ARCHITECTURE"></div>
+          <h2 class="editorial-heading">
+            Three-stage pipeline
+            <span class="heading-accent">from raw MP4 to softmax.</span>
+          </h2>
+          <p class="editorial-lead">
+            Web inference executes the exact same frame-sampling and normalization contract used during PyTorch training.
+          </p>
+        </div>
+
+        <div class="hairline-divider"></div>
+
+        <div class="pipeline-steps-grid">
+          <article class="ui-card pipeline-card">
+            <div class="pipeline-step-top">
+              <span class="pipeline-step-idx">01</span>
+              <span class="pipeline-step-tag">PREPROCESS.PY</span>
+            </div>
+            <h3>Uniform 16-Frame Sampling</h3>
+            <p>
+              Every frame in the uploaded clip is decoded and resized to 160×160 RGB via <code>cv2.INTER_AREA</code> without cropping. Exactly 16 indices are chosen uniformly with <code>np.linspace(0, n-1, 16)</code>.
+            </p>
+          </article>
+
+          <article class="ui-card pipeline-card">
+            <div class="pipeline-step-top">
+              <span class="pipeline-step-idx">02</span>
+              <span class="pipeline-step-tag">ONNX RUNTIME</span>
+            </div>
+            <h3>3D Spatio-Temporal Convolution</h3>
+            <p>
+              Tensors are normalized per model using <code>deployment_meta.json</code> statistics into shape <code>(1, 3, 16, 160, 160)</code> and evaluated by X3D (12.0 MB) and R(2+1)D (125.2 MB).
+            </p>
+          </article>
+
+          <article class="ui-card pipeline-card">
+            <div class="pipeline-step-top">
+              <span class="pipeline-step-idx">03</span>
+              <span class="pipeline-step-tag">CALIBRATION</span>
+            </div>
+            <h3>Temperature-Scaled Fusion</h3>
+            <p>
+              Raw logits are divided by each model's learned temperature before softmax. In Accurate mode, calibrated probabilities from X3D and R(2+1)D are averaged 50:50.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 05: TECH STACK -->
+    <section id="tech-stack" class="editorial-section">
+      <div class="container">
+        <div class="editorial-top-split">
+          <div class="section-header-editorial">
+            <div class="section-eyebrow" data-eyebrow-num="05" data-eyebrow-text="TECH STACK"></div>
+            <h2 class="editorial-heading">
+              Technologies powering Twizzle,
+              <span class="heading-accent">from training to browser.</span>
+            </h2>
+            <p class="editorial-lead">
+              Every component in the pipeline—from 16-frame OpenCV decoding and PyTorch 3D CNN training to ONNX Runtime serving on Hugging Face Spaces and static deployment on Vercel.
+            </p>
+          </div>
+        </div>
+
+        <div class="hairline-divider"></div>
+
+        <div class="tech-stack-grid">
+          <article class="ui-card tech-group-card">
+            <span class="tech-group-label">01 / MODELS &amp; TRAINING</span>
+            <h3>3D Spatio-Temporal Networks</h3>
+            <ul class="tech-items-list">
+              <li class="tech-item-row">
+                <div class="tech-logo-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#EE4C2C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 3a9 9 0 1 0 6.36 2.64"/>
+                    <circle cx="15.5" cy="5.5" r="1.5" fill="#EE4C2C" stroke="none"/>
+                  </svg>
+                </div>
+                <div>
+                  <strong>PyTorch</strong>
+                  <span>Model training, temperature calibration &amp; export</span>
+                </div>
+              </li>
+              <li class="tech-item-row">
+                <div class="tech-logo-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#107AEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                    <path d="M2 12l10 5 10-5"/>
+                    <path d="M2 17l10 5 10-5"/>
+                  </svg>
+                </div>
+                <div>
+                  <strong>X3D (x3d_s)</strong>
+                  <span>12.0 MB ONNX • Fast inference mode</span>
+                </div>
+              </li>
+              <li class="tech-item-row">
+                <div class="tech-logo-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#0284C7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="4" width="12" height="12" rx="2"/>
+                    <rect x="9" y="8" width="12" height="12" rx="2"/>
+                  </svg>
+                </div>
+                <div>
+                  <strong>R(2+1)D (r2plus1d_18)</strong>
+                  <span>125.2 MB ONNX • Fused 50:50 Accurate mode</span>
+                </div>
+              </li>
+            </ul>
+          </article>
+
+          <article class="ui-card tech-group-card">
+            <span class="tech-group-label">02 / PREPROCESSING &amp; RUNTIME</span>
+            <h3>Video Sampling &amp; Inference</h3>
+            <ul class="tech-items-list">
+              <li class="tech-item-row">
+                <div class="tech-logo-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#005CED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="8"/>
+                    <path d="M8 12h8M12 8v8"/>
+                  </svg>
+                </div>
+                <div>
+                  <strong>ONNX Runtime</strong>
+                  <span>CPU execution provider for cross-platform serving</span>
+                </div>
+              </li>
+              <li class="tech-item-row">
+                <div class="tech-logo-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2">
+                    <circle cx="12" cy="7" r="3.5" stroke="#EF4444"/>
+                    <circle cx="7.5" cy="15.5" r="3.5" stroke="#22C55E"/>
+                    <circle cx="16.5" cy="15.5" r="3.5" stroke="#3B82F6"/>
+                  </svg>
+                </div>
+                <div>
+                  <strong>OpenCV (cv2)</strong>
+                  <span>160×160 INTER_AREA resize &amp; uniform 16-frame sampling</span>
+                </div>
+              </li>
+              <li class="tech-item-row">
+                <div class="tech-logo-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#0284C7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="12 2 20 7 20 17 12 22 4 17 4 7"/>
+                    <path d="M9 15V9l6 6V9"/>
+                  </svg>
+                </div>
+                <div>
+                  <strong>NumPy</strong>
+                  <span>Channel normalization &amp; calibrated softmax fusion</span>
+                </div>
+              </li>
+            </ul>
+          </article>
+
+          <article class="ui-card tech-group-card">
+            <span class="tech-group-label">03 / BACKEND &amp; HOSTING</span>
+            <h3>Model Serving API</h3>
+            <ul class="tech-items-list">
+              <li class="tech-item-row">
+                <div class="tech-logo-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="9"/>
+                    <circle cx="9.5" cy="10" r="1" fill="#F59E0B" stroke="none"/>
+                    <circle cx="14.5" cy="10" r="1" fill="#F59E0B" stroke="none"/>
+                    <path d="M8.5 14.5c1 1.5 2.2 2 3.5 2s2.5-.5 3.5-2"/>
+                  </svg>
+                </div>
+                <div>
+                  <strong>Hugging Face Spaces</strong>
+                  <span>ZeroGPU Gradio host (WilliamJovaski/Twizzle)</span>
+                </div>
+              </li>
+              <li class="tech-item-row">
+                <div class="tech-logo-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#EA580C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="12 3 21 8 12 13 3 8"/>
+                    <polygon points="12 11 21 16 12 21 3 16"/>
+                  </svg>
+                </div>
+                <div>
+                  <strong>Gradio</strong>
+                  <span>/classify inference API &amp; classic UI fallback</span>
+                </div>
+              </li>
+              <li class="tech-item-row">
+                <div class="tech-logo-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="9"/>
+                    <polygon points="13 7 8 13 12 13 11 17 16 11 12 11" fill="#059669" stroke="none"/>
+                  </svg>
+                </div>
+                <div>
+                  <strong>FastAPI &amp; Uvicorn</strong>
+                  <span>Local development server &amp; static asset routing</span>
+                </div>
+              </li>
+            </ul>
+          </article>
+
+          <article class="ui-card tech-group-card">
+            <span class="tech-group-label">04 / FRONTEND &amp; DEPLOY</span>
+            <h3>Web Client Architecture</h3>
+            <ul class="tech-items-list">
+              <li class="tech-item-row">
+                <div class="tech-logo-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#107AEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 18 22 12 16 6"/>
+                    <polyline points="8 6 2 12 8 18"/>
+                  </svg>
+                </div>
+                <div>
+                  <strong>HTML5 / CSS3 / ES Modules</strong>
+                  <span>Responsive editorial UI with centralized --scale tokens</span>
+                </div>
+              </li>
+              <li class="tech-item-row">
+                <div class="tech-logo-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+                  </svg>
+                </div>
+                <div>
+                  <strong>@gradio/client</strong>
+                  <span>Direct browser-to-Space prediction calls</span>
+                </div>
+              </li>
+              <li class="tech-item-row">
+                <div class="tech-logo-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="#020817">
+                    <polygon points="12 4 21 20 3 20"/>
+                  </svg>
+                </div>
+                <div>
+                  <strong>Vercel</strong>
+                  <span>Static frontend hosting via vercel.json</span>
+                </div>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 06: PROJECT TEAM -->
+    <section id="team" class="editorial-section section-tinted">
+      <div class="container">
+        <div class="editorial-top-split">
+          <div class="section-header-editorial">
+            <div class="section-eyebrow" data-eyebrow-num="06" data-eyebrow-text="PROJECT TEAM"></div>
+            <h2 class="editorial-heading">
+              The team behind Twizzle,
+              <span class="heading-accent">from dataset to deployment.</span>
+            </h2>
+            <p class="editorial-lead">
+              Built as a Deep Learning final project covering video preprocessing, spatio-temporal 3D CNN training, and web deployment. Edit member details in <code>static/team.json</code>.
+            </p>
+          </div>
+        </div>
+
+        <div class="hairline-divider"></div>
+
+        <div id="teamGrid" class="team-grid" aria-live="polite">
+          <!-- Populated from static/team.json -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="editorial-footer">
+    <div class="container footer-inner">
+      <div>
+        <span class="brand-text footer-brand">TW<span class="brand-dot">I</span>ZZLE</span>
+        <p class="footer-copy">Deep Learning Figure Skating Element Classification System (X3D &amp; R(2+1)D).</p>
+      </div>
+      <div class="footer-links">
+        <a href="#home">Overview</a>
+        <a href="#elements">Elements (11)</a>
+        <a href="#classifier">AI Studio</a>
+        <a href="#skaters">Skaters</a>
+        <a href="#tech-stack">Tech Stack</a>
+        <a href="#team">Team</a>
+        <a href="https://huggingface.co/spaces/WilliamJovaski/Twizzle" target="_blank" rel="noopener noreferrer">Hugging Face Space</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/static/script.js?v=20261121f"></script>
+</body>
+</html>
