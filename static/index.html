@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600&family=Orbitron:wght@700;800;900&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/static/styles.css?v=20261121f" />
+  <link rel="stylesheet" href="/static/styles.css?v=20261121g" />
 </head>
 <body>
   <!-- Top Navigation Bar -->
@@ -26,18 +26,40 @@
         <a href="#team" class="nav-link">Team</a>
       </nav>
       <div class="nav-actions">
-        <a href="#classifier" class="btn btn-primary btn-sm">
+        <a href="#classifier" class="btn btn-primary btn-sm nav-cta-btn">
           Classify Clip
         </a>
+        <button
+          id="navBurgerBtn"
+          class="nav-burger-btn"
+          type="button"
+          aria-label="Open quick navigation menu"
+          aria-expanded="false"
+          aria-controls="mobileNavMenu"
+        >
+          <span class="nav-burger-lines" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </span>
+          <span class="nav-burger-label">Menu</span>
+        </button>
       </div>
     </div>
+    <nav id="mobileNavMenu" class="mobile-nav-menu" aria-label="Mobile Navigation" hidden>
+      <div class="mobile-nav-header">Quick Jump</div>
+      <a href="#elements" class="mobile-nav-link"><span>01</span> Elements</a>
+      <a href="#classifier" class="mobile-nav-link"><span>02</span> AI Studio</a>
+      <a href="#skaters" class="mobile-nav-link"><span>03</span> Skaters</a>
+      <a href="#how-it-works" class="mobile-nav-link"><span>04</span> Pipeline</a>
+      <a href="#tech-stack" class="mobile-nav-link"><span>05</span> Tech Stack</a>
+      <a href="#team" class="mobile-nav-link"><span>06</span> Team</a>
+    </nav>
   </header>
 
   <!-- HERO SECTION (UNTOUCHED AS REQUESTED) -->
   <section id="home" class="hero-section">
     <!-- Top Action Sub-Bar that slides down at Stage 4 -->
     <div id="heroTopBar" class="hero-top-bar">
-      <h2 class="hero-bar-title">DECODE EVERY TWIZZLE</h2>
+      <h2 class="hero-bar-title">ANALYZE EVERY MOVE</h2>
       <div class="hero-bar-buttons">
         <a href="#classifier" class="btn btn-primary">
           Launch AI Studio
@@ -72,9 +94,9 @@
 
       <!-- Layer 3: Giant Background Typography (slides in behind skater, then fades) -->
       <div id="heroGiantText" class="hero-giant-text" aria-hidden="true">
-        <h1 class="giant-word word-1">DECODE</h1>
+        <h1 class="giant-word word-1">ANALYZE</h1>
         <h1 class="giant-word word-2">EVERY</h1>
-        <h1 class="giant-word word-3">TWIZZLE</h1>
+        <h1 class="giant-word word-3">MOVE</h1>
       </div>
 
       <!-- Layer 4: Twizzle / One-Foot Spin Figure Skater Cutout -->
@@ -825,6 +847,6 @@
     </div>
   </footer>
 
-  <script type="module" src="/static/script.js?v=20261121f"></script>
+  <script type="module" src="/static/script.js?v=20261121g"></script>
 </body>
 </html>

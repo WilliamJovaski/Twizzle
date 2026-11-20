@@ -1175,5 +1175,64 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  function initMobileNav() {
+    const burgerBtn = document.getElementById("navBurgerBtn");
+    const mobileMenu = document.getElementById("mobileNavMenu");
+    if (!burgerBtn || !mobileMenu) return;
+
+    function closeMenu() {
+      burgerBtn.classList.remove("is-open");
+      burgerBtn.setAttribute("aria-expanded", "false");
+      mobileMenu.classList.remove("is-open");
+      window.setTimeout(() => {
+        if (!burgerBtn.classList.contains("is-open")) {
+          mobileMenu.hidden = true;
+        }
+      }, 180);
+    }
+
+    function openMenu() {
+      mobileMenu.hidden = false;
+      requestAnimationFrame(() => {
+        burgerBtn.classList.add("is-open");
+        burgerBtn.setAttribute("aria-expanded", "true");
+        mobileMenu.classList.add("is-open");
+      });
+    }
+
+    burgerBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      if (burgerBtn.classList.contains("is-open")) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+
+    mobileMenu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", closeMenu);
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!burgerBtn.classList.contains("is-open")) return;
+      if (!mobileMenu.contains(e.target) && !burgerBtn.contains(e.target)) {
+        closeMenu();
+      }
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && burgerBtn.classList.contains("is-open")) {
+        closeMenu();
+      }
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 900 && burgerBtn.classList.contains("is-open")) {
+        closeMenu();
+      }
+    });
+  }
+
+  initMobileNav();
   initTeamSection();
 });
